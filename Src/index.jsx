@@ -9,4 +9,4 @@ ReactDOM.render(
   </React.StrictMode>,
   const root = ReactDOM.createRoot(document.getElementById('root'));
 );
-export default index.js;
+export default app;
