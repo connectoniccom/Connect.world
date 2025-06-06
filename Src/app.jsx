@@ -1,8 +1,3 @@
-import Header from '/Header';
-import Counter from './Counter';
-import UserList from './UserList';
-import ContactForm from './ContactForm';
-import ToggleMessage from './ToggleMessage';
 import './app.css';
 
 function App() {
