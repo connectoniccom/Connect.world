@@ -22,13 +22,4 @@ function App() {
     </div>
   );
 }
-
-      <Header />
-      <Counter />
-      <UserList />
-      <ContactForm />
-      <ToggleMessage />
-    </div>
-  );
-}
 export default App;
