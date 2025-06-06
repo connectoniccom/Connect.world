@@ -1,13 +1,18 @@
-import Header from './components/Header';
-import Counter from './components/Counter';
-import UserList from './components/UserList';
-import ContactForm from './components/ContactForm';
-import ToggleMessage from './components/ToggleMessage';
-import './styles/App.css';
+import Header from '/Header';
+import Counter from './Counter';
+import UserList from './UserList';
+import ContactForm from './ContactForm';
+import ToggleMessage from './ToggleMessage';
+import './app.css';
 
 function App() {
   return (
     <div className="app">
+    <header className="App-header">
+    <image src="Favicon.jpg" />
+     <p>
+          GitHub Codespaces <span className="heart">♥️</span> connectonic
+        </p>
       <Header />
       <Counter />
       <UserList />
