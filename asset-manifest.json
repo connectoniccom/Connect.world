@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Connectonic.live/static/css/main.cadb0163.css",
-    "main.js": "/Connectonic.live/static/js/main.a407757d.js",
-    "static/js/453.ebb04a9e.chunk.js": "/Connectonic.live/static/js/453.ebb04a9e.chunk.js",
-    "index.html": "/Connectonic.live/index.html",
-    "main.cadb0163.css.map": "/Connectonic.live/static/css/main.cadb0163.css.map",
-    "main.a407757d.js.map": "/Connectonic.live/static/js/main.a407757d.js.map",
-    "453.ebb04a9e.chunk.js.map": "/Connectonic.live/static/js/453.ebb04a9e.chunk.js.map"
+    "main.css": "/Connect.world/static/css/main.cadb0163.css",
+    "main.js": "/Connect.world/static/js/main.baecfb4d.js",
+    "static/js/453.ebb04a9e.chunk.js": "/Connect.world/static/js/453.ebb04a9e.chunk.js",
+    "index.html": "/Connect.world/index.html",
+    "main.cadb0163.css.map": "/Connect.world/static/css/main.cadb0163.css.map",
+    "main.baecfb4d.js.map": "/Connect.world/static/js/main.baecfb4d.js.map",
+    "453.ebb04a9e.chunk.js.map": "/Connect.world/static/js/453.ebb04a9e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cadb0163.css",
-    "static/js/main.a407757d.js"
+    "static/js/main.baecfb4d.js"
   ]
 }
