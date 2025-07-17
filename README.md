@@ -1,8 +1,8 @@
 # 👋 Hello developer!
 
-This is one of the many templates available from W3Schools. Check our [tutorials for frontend development](https://www.w3schools.com/where_to_start.asp) to learn the basics of [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp) and [JavaScript](https://www.w3schools.com/js/default.asp). 🦄
+This project contains a basic node express application to get you started. Check our [tutorials for frontend development](https://www.w3schools.com/where_to_start.asp) to learn the basics of [HTML](https://www.w3schools.com/html/default.asp), [CSS](https://www.w3schools.com/css/default.asp) and [JavaScript](https://www.w3schools.com/js/default.asp). 🦄
 
-This project serves as an example of what can be achieved. It is not a fully functional product. Feel free to use the source code and ideas as a starting point for your own projects.
+While you're in the editor working, the site will be running `npm run dev`, which runs Nodemon, and changes to JS files or environment will restart the application. Once you close the editor, the container runs `npm run start`.
 
 ## Knowledge requirements
 
@@ -11,9 +11,12 @@ To be able to fully understand and modify this template to your needs, there are
 - [HTML](https://www.w3schools.com/html/default.asp)
 - [CSS](https://www.w3schools.com/css/default.asp)
 - [JavaScript](https://www.w3schools.com/js/default.asp)
-- [React](https://reactjs.org/)
 - [Node.js](https://www.w3schools.com/nodejs/default.asp)
 - [Express.js](https://expressjs.com/)
+
+## Warning - environment variables
+
+Do not change SQLITE_DB as it is generated. If you change it the space will not behave as predicted.
 
 ## 🔨 What's next?
 
@@ -22,24 +25,7 @@ Remember to make your layout responsive - if you want your site to look good on 
 
 ## 🎨 Where to find everything?
 
-This template is made by using several technologies.  
-Below are explanations about where to find specific code.
-
-### Root HTML
-
-There are only one important HTML file in this project which is the base page around the application. It is a bit different from a default React project as you can find the skeleton HTML `index.html` in the root folder instead of `public`.
-
-### CSS and images
-
-You can find the CSS for the application in `src/client/app.css`.
-
-### Application
-
-You can find the core frontend React application in `src/client`. Here you have a normal React setup with `index.js` as the glue that pieces the `.jsx` components together. You will have to know React to use this template.
-
-### Backend
-
-The backend logic is located under `src/server`. `src/server/index.js` is the main file handling the APIs. 
+You can find static resources in the folder `public`.
 
 ### Database
 
@@ -52,10 +38,11 @@ SQLite connection path to the database is `w3s-dynamic-storage/database.db` whic
 **By changing the `w3s-dynamic-storage` folder name or `database.db` file name, you risk the space not working properly.**
 
 ## 🔨 Please note
-For now, files created/uploaded or edited from within the terminal view will not be backed up or synced. 
+For now files created/uploaded or edited from within the terminal view will not be backed up or synced. 
 
 ## ⛑ Need support?
+
 [Join our Discord community](https://discord.gg/6Z7UaRbUQM) and ask questions in the **#spaces-general** channel to get your space on the next level.  
 [Send us a ticket](https://support.w3schools.com/hc/en-gb) if you have any technical issues with Spaces.
 
-Happy learning!
+Happy coding!
