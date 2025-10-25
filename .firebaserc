@@ -1,1 +1,5 @@
-{"projects":{"default":"connectonic-live"}}
+{
+  "projects": {
+    "default": "connectonic-live"
+  }
+}
