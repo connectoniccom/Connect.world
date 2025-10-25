@@ -1,3 +1,4 @@
+
 # To learn more about how to use Nix to configure your environment
 # see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
@@ -9,6 +10,13 @@
     pkgs.terraform
     pkgs.nodejs
     pkgs.nodePackages.pnpm
+    pkgs.flutter
+    pkgs.cmake
+    pkgs.ninja
+    pkgs.gxx
+    pkgs.clang
+    pkgs.pkg-config
+    pkgs.google-chrome
   ];
 
   # Sets environment variables in the workspace
@@ -27,6 +35,7 @@
     extensions = [
       "hashicorp.terraform"
       "angular.ng-template"
+      "dart-code.flutter"
     ];
 
     # Enable previews
@@ -43,6 +52,17 @@
 
           manager = "web";
         };
+        flutter = {
+          command = [
+            "flutter"
+            "run"
+            "-d"
+            "chrome"
+            "--web-port"
+            "$PORT"
+          ];
+          manager = "web";
+        };
       };
     };
 
@@ -54,17 +74,17 @@
           "README.md"
           "src/services/task.service.ts"
         ];
-        terraform = ''
+        terraform = '''
           # terraform init --upgrade
           # terraform apply -parallelism=20 --auto-approve -compact-warnings
-        '';
+        ''';
         npm = "pnpm install";
       };
       # Runs when the workspace is (re)started
       onStart = {
-         terraform = ''
-          # terraform apply -parallelism=20 --auto-approve -compact-warnings
-        '';
+         terraform = '''
+           # terraform apply -parallelism=20 --auto-approve -compact-warnings
+         ''';
       };
     };
   };

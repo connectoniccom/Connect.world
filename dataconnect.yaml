@@ -1,0 +1,61 @@
+
+# Firebase Data Connect configuration file
+#
+# This file defines the data models, queries, and security rules for your
+# Data Connect service. You can edit this file to customize your data schema
+# and security policies.
+#
+# For more information, see the Firebase Data Connect documentation:
+# https://firebase.google.com/docs/dataconnect
+
+# The version of the Data Connect configuration language.
+# This value should not be changed.
+schemaVersion: 1
+
+# The name of the connector that your Data Connect service will use to
+# connect to your database. This value should be the name of a connector
+# that you have configured in your Firebase project.
+connector: managed-cloud-sql
+
+# The data models that your Data Connect service will expose. Each data
+# model is defined by a table in your database and a set of fields that
+# correspond to the columns in that table.
+#
+# You can also define relationships between data models using the
+# `belongsTo` and `hasMany` properties.
+#
+# For more information, see the Firebase Data Connect documentation:
+# https://firebase.google.com/docs/dataconnect/data-modeling
+schema:
+  # The name of the file that contains your data schema.
+  # This value should be the name of a file in your project that contains
+  # your data schema in SQL format.
+  file: dataconnect.sql
+
+# The security rules that will be applied to your Data Connect service.
+# Security rules are defined using the Common Expression Language (CEL).
+#
+# For more information, see the Firebase Data Connect documentation:
+# https://firebase.google.com/docs/dataconnect/security-rules
+security:
+  # The default security rule that will be applied to all data models.
+  # This rule will be used if a more specific rule is not defined for a
+  # particular data model.
+  default:
+    # Allow all authenticated users to read and write all data.
+    read: auth != null
+    write: auth != null
+
+  # The security rules for the `Users` data model.
+  Users:
+    # Allow users to read their own user record.
+    read: auth.uid == resource.id
+
+    # Allow users to create their own user record.
+    create: auth.uid == resource.id
+
+  # The security rules for the `Tasks` data model.
+  Tasks:
+    # Allow users to read and write their own tasks.
+    read: auth.uid == resource.owner
+    write: auth.uid == resource.owner
